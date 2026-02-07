@@ -1,0 +1,259 @@
+/* Employment Page Styles */
+.employment-page {
+    padding-top: 100px;
+    padding-bottom: 4rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.employment-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.employment-header h1 {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.employment-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Intro Section */
+.employment-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--color-charcoal);
+}
+
+.intro-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+}
+
+/* Positions Section */
+.positions-section {
+    margin-bottom: 4rem;
+}
+
+.positions-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-charcoal);
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.position-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.position-card:hover {
+    transform: translateY(-5px);
+}
+
+.position-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.position-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.position-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.position-card li {
+    padding: 0.5rem 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.position-card li:last-child {
+    border-bottom: none;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 4rem;
+}
+
+.benefits-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-charcoal);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+}
+
+.benefit-item span:last-child {
+    font-weight: 600;
+    color: var(--color-charcoal);
+}
+
+/* Apply Section */
+.apply-section {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.apply-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.apply-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.apply-option {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.apply-option h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.apply-option address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.phone-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+}
+
+.phone-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.apply-note {
+    text-align: center;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .employment-page {
+        padding-top: 80px;
+    }
+
+    .employment-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .employment-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .employment-intro .intro-image {
+        order: -1;
+    }
+
+    .positions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .apply-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}

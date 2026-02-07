@@ -1,0 +1,156 @@
+/* Party Room Page Styles */
+.party-room-page {
+    padding-top: 100px;
+    padding-bottom: 4rem;
+}
+
+.party-room-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.party-room-header h1 {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.party-room-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Party Content Grid */
+.party-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* Gallery Grid */
+.party-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.party-gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.party-gallery img.featured {
+    grid-column: span 2;
+    height: 300px;
+}
+
+.party-gallery img.small {
+    height: 200px;
+}
+
+/* Details Card */
+.party-details-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    height: fit-content;
+}
+
+.party-details-card h2 {
+    font-family: var(--font-heading);
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.party-details-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.party-details-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.party-details-list .checkmark {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.party-details-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.booking-policy {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.party-note {
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid #ff9800;
+    margin-bottom: 2rem;
+}
+
+.party-cta-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color var(--transition-fast);
+}
+
+.party-cta-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .party-room-page {
+        padding-top: 80px;
+    }
+
+    .party-room-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .party-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .party-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .party-gallery img.featured,
+    .party-gallery img.small {
+        grid-column: span 1;
+        height: 200px;
+    }
+}

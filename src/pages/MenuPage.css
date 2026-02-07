@@ -1,0 +1,336 @@
+/* Menu Page Styles */
+.menu-page {
+    padding-top: 90px;
+    padding-bottom: 4rem;
+    background-color: #fafafa;
+}
+
+.menu-page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu-page-header h1 {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.menu-page-header p {
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+/* Quick Links */
+.menu-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.quick-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: var(--color-charcoal);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.quick-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* Action Buttons */
+.menu-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.action-btn.pdf-btn {
+    background-color: #4a5568;
+    color: white;
+}
+
+.action-btn.pdf-btn:hover {
+    background-color: #2d3748;
+}
+
+.action-btn.order-btn {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.action-btn.order-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.action-btn.gift-btn {
+    background-color: #38a169;
+    color: white;
+}
+
+.action-btn.gift-btn:hover {
+    background-color: #2f855a;
+}
+
+/* Build Your Own CTA Banner */
+.build-your-own-cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #ff4444 100%);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(226, 18, 22, 0.3);
+}
+
+.build-your-own-cta h2 {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.build-your-own-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.build-cta-btn {
+    background-color: white;
+    color: var(--color-primary);
+    padding: 0.875rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.build-cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Half-Baked Info */
+.half-baked-info {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.half-baked-info h2 {
+    font-family: var(--font-heading);
+    color: var(--color-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.half-baked-info>p {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.half-baked-instructions {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.half-baked-instructions li {
+    padding: 0.25rem 0;
+    color: #856404;
+}
+
+/* Menu Category */
+.menu-category {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menu-category h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+}
+
+.category-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.side-note,
+.special-note {
+    background: #f0f7ff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #2c5282;
+}
+
+.special-note {
+    background: #fffbeb;
+    color: #92400e;
+}
+
+/* Menu List */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    gap: 1rem;
+}
+
+.menu-list-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-info {
+    flex: 1;
+}
+
+.menu-item-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: 0.25rem;
+}
+
+.menu-item-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.menu-item-price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.menu-item-price .price {
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.add-btn-small {
+    padding: 0.4rem 0.75rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-btn-small:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Back to Top */
+.back-to-top {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.back-to-top a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-to-top a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-page {
+        padding-top: 80px;
+    }
+
+    .menu-page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-btn {
+        justify-content: center;
+    }
+
+    .build-your-own-cta {
+        padding: 1.5rem;
+    }
+
+    .build-your-own-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-list-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .menu-item-price {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

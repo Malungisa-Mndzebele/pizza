@@ -1,0 +1,237 @@
+.hero {
+    min-height: 70vh;
+    width: 100%;
+    background-image: url('/assets/real_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+    margin-top: 70px;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+/* Anniversary Badge */
+.anniversary-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(226, 18, 22, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.badge-years {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    line-height: 1;
+}
+
+.badge-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Hours Display */
+.hero-hours {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.hero-hours p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
+.hero-hours strong {
+    color: #ffeb3b;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 0 #B00E11;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #B00E11;
+}
+
+.btn-hero:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.btn-hero-outline {
+    background-color: white;
+    color: var(--color-charcoal);
+    border: none;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    box-shadow: 0 4px 0 #ccc;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-hero-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #ccc;
+}
+
+.btn-hero-outline:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Quick Links */
+.hero-quick-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+}
+
+.quick-action:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        margin-top: 60px;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .anniversary-badge {
+        padding: 0.75rem 1rem;
+    }
+
+    .badge-years {
+        font-size: 2rem;
+    }
+
+    .hero-hours {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-hours p {
+        font-size: 0.85rem;
+    }
+
+    .btn-hero,
+    .btn-hero-outline {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .hero-quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-action {
+        width: 80%;
+        justify-content: center;
+    }
+}
