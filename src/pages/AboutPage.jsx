@@ -73,17 +73,6 @@ const AboutPage = () => {
                     <p className="video-description">
                         Made-from-scratch tradition with sincere customer service! Mabe's Pizza enjoys the satisfaction of serving food to others and has carried this tradition since their beginning as Mabel's Lunchroom in 1953.
                     </p>
-                    <div className="video-container">
-                        <iframe
-                            width="100%"
-                            height="450"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            title="Mabe's Pizza - Our Story with Collin White"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
                     <p className="video-quote">
                         <em>"We love to support our community. Being here for 70 years now, I like to think that we're a stone in the community to help out who ever we need and whenever it needs to be done."</em>
                         <br />

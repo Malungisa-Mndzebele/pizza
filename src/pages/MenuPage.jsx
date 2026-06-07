@@ -8,18 +8,19 @@ const MenuPage = () => {
         window.open('https://order.toasttab.com/online/mabes-pizza-110-e-water-st', '_blank');
     };
 
-    // Convert menuData object to array for easier mapping
+    // Convert menuData object to array for easier mapping.
+    // Explicit ids keep the quick-link anchors above in sync with each section.
     const categories = [
-        menuData.pizza,
-        menuData.appetizers,
-        menuData.burgersAndSandwiches,
-        menuData.dinners,
-        menuData.pastas,
-        menuData.salads,
-        menuData.chickenToGo,
-        menuData.kidsAndSenior,
-        menuData.beverages,
-        menuData.beerAndWine,
+        { id: 'pizza', data: menuData.pizza },
+        { id: 'appetizers', data: menuData.appetizers },
+        { id: 'burgers', data: menuData.burgersAndSandwiches },
+        { id: 'dinners', data: menuData.dinners },
+        { id: 'pastas', data: menuData.pastas },
+        { id: 'salads', data: menuData.salads },
+        { id: 'chicken', data: menuData.chickenToGo },
+        { id: 'kids', data: menuData.kidsAndSenior },
+        { id: 'beverages', data: menuData.beverages },
+        { id: 'beer', data: menuData.beerAndWine },
     ];
 
     return (
@@ -91,11 +92,11 @@ const MenuPage = () => {
                 </div>
 
                 {/* Menu Categories */}
-                {categories.map((category, idx) => (
+                {categories.map(({ id, data: category }) => (
                     <div
-                        key={idx}
+                        key={id}
                         className="menu-category"
-                        id={category.title.toLowerCase().replace(/[^a-z]/g, '')}
+                        id={id}
                     >
                         <h2>{category.title}</h2>
                         <p className="category-description">{category.description}</p>
