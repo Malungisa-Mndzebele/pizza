@@ -84,6 +84,16 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    /* Reset native <button> styling so cards render identically */
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    align-items: center;
+}
+
+.option-card:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .option-card:hover {

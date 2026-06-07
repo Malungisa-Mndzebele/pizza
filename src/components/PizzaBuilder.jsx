@@ -91,15 +91,17 @@ const PizzaBuilder = () => {
                             <h3>Select Size</h3>
                             <div className="options-grid">
                                 {pizzaOptions.sizes.map(size => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={size.id}
                                         className={`option-card ${selectedSize.id === size.id ? 'selected' : ''}`}
+                                        aria-pressed={selectedSize.id === size.id}
                                         onClick={() => setSelectedSize(size)}
                                     >
                                         <div className="option-image">🍕</div>
                                         <span className="option-name">{size.name}</span>
                                         <span className="option-price">${size.price.toFixed(2)}</span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -108,15 +110,17 @@ const PizzaBuilder = () => {
                             <h3>Select Crust</h3>
                             <div className="options-grid">
                                 {pizzaOptions.crusts.map(crust => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={crust.id}
                                         className={`option-card ${selectedCrust.id === crust.id ? 'selected' : ''}`}
+                                        aria-pressed={selectedCrust.id === crust.id}
                                         onClick={() => setSelectedCrust(crust)}
                                     >
                                         <div className="option-image">🥖</div>
                                         <span className="option-name">{crust.name}</span>
                                         <span className="option-price">{crust.price > 0 ? `+$${crust.price.toFixed(2)}` : 'Included'}</span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -129,15 +133,17 @@ const PizzaBuilder = () => {
                             <h3>Select Sauce</h3>
                             <div className="options-grid">
                                 {pizzaOptions.sauces.map(sauce => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={sauce.id}
                                         className={`option-card ${selectedSauce.id === sauce.id ? 'selected' : ''}`}
+                                        aria-pressed={selectedSauce.id === sauce.id}
                                         onClick={() => setSelectedSauce(sauce)}
                                     >
                                         <div className="option-image">🍅</div>
                                         <span className="option-name">{sauce.name}</span>
                                         <span className="option-price">{sauce.price > 0 ? `+$${sauce.price.toFixed(2)}` : 'Included'}</span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -146,15 +152,17 @@ const PizzaBuilder = () => {
                             <h3>Select Cheese</h3>
                             <div className="options-grid">
                                 {pizzaOptions.cheeses.map(cheese => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={cheese.id}
                                         className={`option-card ${selectedCheese.id === cheese.id ? 'selected' : ''}`}
+                                        aria-pressed={selectedCheese.id === cheese.id}
                                         onClick={() => setSelectedCheese(cheese)}
                                     >
                                         <div className="option-image">🧀</div>
                                         <span className="option-name">{cheese.name}</span>
                                         <span className="option-price">{cheese.price > 0 ? `+$${cheese.price.toFixed(2)}` : 'Included'}</span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -167,9 +175,11 @@ const PizzaBuilder = () => {
                             <h3>Select Meats</h3>
                             <div className="options-grid">
                                 {pizzaOptions.meats.map(meat => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={meat.id}
                                         className={`option-card ${selectedMeats.includes(meat.id) ? 'selected' : ''}`}
+                                        aria-pressed={selectedMeats.includes(meat.id)}
                                         onClick={() => toggleMeat(meat.id)}
                                     >
                                         <div className="option-image">🥩</div>
@@ -177,7 +187,7 @@ const PizzaBuilder = () => {
                                         <span className="option-price">
                                             {selectedMeats.includes(meat.id) ? 'Selected' : `Add $${meat.price.toFixed(2)}`}
                                         </span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -186,9 +196,11 @@ const PizzaBuilder = () => {
                             <h3>Select Veggies</h3>
                             <div className="options-grid">
                                 {pizzaOptions.veggies.map(veg => (
-                                    <div
+                                    <button
+                                        type="button"
                                         key={veg.id}
                                         className={`option-card ${selectedVeggies.includes(veg.id) ? 'selected' : ''}`}
+                                        aria-pressed={selectedVeggies.includes(veg.id)}
                                         onClick={() => toggleVeggie(veg.id)}
                                     >
                                         <div className="option-image">🥦</div>
@@ -196,7 +208,7 @@ const PizzaBuilder = () => {
                                         <span className="option-price">
                                             {selectedVeggies.includes(veg.id) ? 'Selected' : `Add $${veg.price.toFixed(2)}`}
                                         </span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
