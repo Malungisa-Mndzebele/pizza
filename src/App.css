@@ -10,3 +10,14 @@
 .app>div:not(.navbar):not(.footer) {
   flex: 1;
 }
+
+/* Fallback shown while a lazily-loaded route chunk downloads */
+.route-loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-size: 1.25rem;
+  color: #888;
+}

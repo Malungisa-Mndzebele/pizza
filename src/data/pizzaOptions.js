@@ -1,13 +1,14 @@
 // Pizza Builder options for Mabe's Pizza.
 // Sizes, crusts, and toppings mirror the real menu (see menuData.js).
-// NOTE: size base prices are approximate cheese-pizza starting prices; verify
-// against the current in-store pricing before launch.
+// Size base prices are the cheese-pizza starting point, derived from the menu's
+// "Regular" pizza ($11.45/$16.45/$19.45/$23.45 = cheese + sausage + pepperoni)
+// minus the two standard meats at the builder's $1.50/meat rate.
 export const pizzaOptions = {
     sizes: [
-        { id: 'special', name: 'Special', price: 9.95, inches: 9 },
-        { id: 'small', name: 'Small', price: 13.95, inches: 12 },
-        { id: 'medium', name: 'Medium', price: 16.95, inches: 14 },
-        { id: 'large', name: 'Large', price: 20.95, inches: 16 },
+        { id: 'special', name: 'Special', price: 8.45, inches: 9 },
+        { id: 'small', name: 'Small', price: 13.45, inches: 12 },
+        { id: 'medium', name: 'Medium', price: 16.45, inches: 14 },
+        { id: 'large', name: 'Large', price: 20.45, inches: 16 },
     ],
     crusts: [
         { id: 'thin', name: 'Original Thin Crust (Square Cut)', price: 0.00 },
